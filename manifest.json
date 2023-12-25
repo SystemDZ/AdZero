@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "AdZero",
+    "version": "1.1",
+    "description": "Block or replace annoying ads with your favorite content.",
+    "permissions": [
+      "https://www.youtube.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.youtube.com/*"
+        ],
+        "js": ["scripts/content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "browser_action": {
+      "default_icon": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      },
+      "default_popup": "popup.html"
+    }
+  }
+  
